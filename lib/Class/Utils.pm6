@@ -5,8 +5,5 @@
 unit role Has;
 
 method new (*@elems, *%attrs) {
-  my $cand = self.Array::new(@elems);
-  self.bless($cand, |%attrs);
+    self.Array::new(@elems).bless(|%attrs)
 }
-
-
